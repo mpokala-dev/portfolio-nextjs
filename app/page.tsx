@@ -1,9 +1,19 @@
+import { Hero } from "@/components/Hero"
+import { About } from "@/components/About"
+import { Skills } from "@/components/Skills"
+import { Projects } from "@/components/Projects"
+import { Experience } from "@/components/Experience"
+import { Footer } from "@/components/Footer"
+
 export default function Home() {
   return (
     <main>
-      <h1 className="text-3xl font-bold text-blue-600">
-        Portfolio coming soon
-      </h1>
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Footer />
     </main>
   )
 }
