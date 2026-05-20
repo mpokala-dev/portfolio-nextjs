@@ -1,8 +1,19 @@
 const experiences = [
   {
-    role: "Senior UI Developer / Team Lead",
-    company: "IBM (via Cognizant)",
+    role: "Senior Developer",
+    company: "Cognizant",
     period: "2022 – 2023",
+    domain: "Financial Services",
+    points: [
+      "Developed and maintained React components for financial services clients",
+      "Built reusable UI components with HTML5, CSS3, and JavaScript ES6+",
+      "Participated in Agile/Scrum ceremonies using Jira and Confluence",
+    ],
+  },
+  {
+    role: "Senior Developer / Team Lead",
+    company: "Capgemini",
+    period: "2019 – 2022",
     domain: "Banking — Synchrony",
     points: [
       "Led a frontend team of 4 developers building React applications for Synchrony Bank",
@@ -12,26 +23,15 @@ const experiences = [
     ],
   },
   {
-    role: "UI Developer",
-    company: "Capgemini",
-    period: "2020 – 2022",
+    role: "Application Developer",
+    company: "IBM",
+    period: "2016 – 2019",
     domain: "Insurance — MetLife",
     points: [
       "Built React.js components for MetLife insurance portal serving 500k+ users",
       "Collaborated with UX designers to implement pixel-perfect responsive layouts",
       "Integrated REST APIs and managed complex async state with Redux Thunk",
       "Mentored 2 junior developers in React best practices",
-    ],
-  },
-  {
-    role: "Junior UI Developer",
-    company: "Cognizant",
-    period: "2018 – 2020",
-    domain: "Financial Services",
-    points: [
-      "Developed and maintained React components for financial services clients",
-      "Built reusable UI components with HTML5, CSS3, and JavaScript ES6+",
-      "Participated in Agile/Scrum ceremonies using Jira and Confluence",
     ],
   },
 ]

@@ -13,8 +13,8 @@ export const About = () => {
               scalable web applications for global clients in Banking and Insurance.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              I've delivered production React applications at <strong>IBM</strong> for Synchrony Bank,
-              led frontend teams at <strong>Capgemini</strong> for MetLife, and worked across the full
+              I've delivered production React applications at <strong>IBM</strong> for MetLife,
+              led frontend teams at <strong>Capgemini</strong> for Synchrony Bank, and worked across the full
               delivery lifecycle at <strong>Cognizant</strong>.
             </p>
             <p className="text-gray-600 leading-relaxed">

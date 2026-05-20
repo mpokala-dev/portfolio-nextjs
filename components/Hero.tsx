@@ -12,16 +12,24 @@ export const Hero = () => {
         </div>
 
         {/* Heading */}
-        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+        <h1 className="text-5xl md:text-4xl font-semibold text-gray-900 mb-6 leading-tight">
           Hi, I'm{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+          <span className="text-balance bg-clip-text ">
             Madhuri
           </span>
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-600 mb-6 font-medium">
-          Senior Frontend Developer · React · TypeScript · AI Apps
-        </p>
+          Senior Frontend & AI Engineer · React · TypeScript · AI Apps
+        </p> 
+ {/* <h1 className="text-balance text-4xl md:text-5xl font-semibold tracking-tight">
+  <span className="bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
+    Madhuri Pokala
+  </span>
+</h1>
+<p className="mt-2 text-lg md:text-xl text-slate-600 dark:text-slate-300">
+  Senior Frontend & AI Engineer · React · TypeScript · Next.js
+</p> */}
 
         <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
           6+ years building production web applications at IBM, Capgemini and Cognizant.
