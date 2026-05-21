@@ -23,7 +23,7 @@ export const Hero = () => {
         </p>
 
         <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-          {personalInfo.yearsExp}+ years building production web applications at IBM, Capgemini and Cognizant.
+          {personalInfo.yearsExp} years building production web applications at IBM, Capgemini and Cognizant.
           Now building AI-powered React apps with OpenAI and Anthropic APIs.
           Based in {personalInfo.location}.
         </p>
