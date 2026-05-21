@@ -37,6 +37,25 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 # Madhuri Pokala — Portfolio
 
+![CI](https://github.com/mpokala-dev/portfolio-nextjs/actions/workflows/ci.yml/badge.svg)
+
 🔗 **Live Site:** https://portfolio-nextjs-rho-eight.vercel.app
 
-Built with Next.js 14 · TypeScript · Tailwind CSS · Resend · Deployed on Vercel
+Built with Next.js 14 · TypeScript · Tailwind CSS v4 · React Server Actions · 
+Resend Email API · Vercel · App Router · SSG · Open Graph SEO
+
+## Test Coverage
+- 52 tests across all components, data layer and form
+- **100% statement, branch, function and line coverage**
+- Run tests: `npm test`
+- Run coverage: `npm run coverage`
+
+## Tech Stack
+- Next.js 14 App Router
+- TypeScript (strict mode)
+- Tailwind CSS v4
+- Next.js Server Actions
+- Resend Email API
+- Vitest + React Testing Library
+- GitHub Actions CI/CD
+- Deployed on Vercel
