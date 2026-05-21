@@ -1,0 +1,33 @@
+import { describe, it, expect } from "vitest"
+import { render, screen } from "@testing-library/react"
+import { Projects } from "@/components/Projects"
+
+describe("Projects", () => {
+  it("renders section heading", () => {
+    render(<Projects />)
+    expect(screen.getByText("Projects")).toBeInTheDocument()
+  })
+
+  it("renders all 4 project titles", () => {
+    render(<Projects />)
+    expect(screen.getByText("Task Manager App")).toBeInTheDocument()
+    expect(screen.getByText("AI Cover Letter Generator")).toBeInTheDocument()
+    expect(screen.getByText("AI Document Chat — RAG")).toBeInTheDocument()
+    expect(screen.getByText("Expense Tracker")).toBeInTheDocument()
+  })
+
+  it("task manager has live demo link", () => {
+    render(<Projects />)
+    const demoLink = screen.getByRole("link", { name: /view live demo/i })
+    expect(demoLink).toHaveAttribute(
+      "href",
+      "https://task-manager-ts-gamma.vercel.app"
+    )
+  })
+
+  it("coming soon projects show coming soon badge", () => {
+    render(<Projects />)
+    const badges = screen.getAllByText("Coming soon")
+    expect(badges).toHaveLength(3)
+  })
+})
