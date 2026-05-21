@@ -2,18 +2,11 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
-]
+import { navLinks, personalInfo } from "@/lib/data"
 
 export const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled]   = useState(false)
+  const [menuOpen, setMenuOpen]   = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -30,7 +23,6 @@ export const Navbar = () => {
           MP<span className="text-gray-900">.</span>
         </Link>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -42,7 +34,7 @@ export const Navbar = () => {
             </Link>
           ))}
           <a
-            href="https://github.com/mpokala-dev"
+            href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
@@ -51,7 +43,6 @@ export const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile menu button */}
         <button
           className="md:hidden text-gray-600"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -65,7 +56,6 @@ export const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
           {navLinks.map((link) => (

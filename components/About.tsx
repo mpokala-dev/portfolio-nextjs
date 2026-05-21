@@ -1,4 +1,15 @@
+import { personalInfo } from "@/lib/data"
+
 export const About = () => {
+  const details = [
+    { label: "Location",     value: personalInfo.location     },
+    { label: "Experience",   value: `${personalInfo.yearsExp} Years` },
+    { label: "Availability", value: personalInfo.availability },
+    { label: "Work type",    value: personalInfo.workType     },
+    { label: "Email",        value: personalInfo.email        },
+    { label: "GitHub",       value: "github.com/mpokala-dev"  },
+  ]
+
   return (
     <section id="about" className="py-24 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
@@ -9,13 +20,14 @@ export const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-gray-600 leading-relaxed mb-4">
-              I'm a Senior Frontend Developer with <strong>6+ years of commercial experience</strong> building
-              scalable web applications for global clients in Banking and Insurance.
+              I&apos;m a Senior Frontend Developer with{" "}
+              <strong>{personalInfo.yearsExp} years of commercial experience</strong>{" "}
+              building scalable web applications for global clients in Banking and Insurance.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              I've delivered production React applications at <strong>IBM</strong> for MetLife,
-              led frontend teams at <strong>Capgemini</strong> for Synchrony Bank, and worked across the full
-              delivery lifecycle at <strong>Cognizant</strong>.
+              I&apos;ve delivered production React applications at <strong>IBM</strong> for Synchrony Bank,
+              led frontend teams at <strong>Capgemini</strong> for MetLife, and worked across
+              the full delivery lifecycle at <strong>Cognizant</strong>.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Currently levelling up with AI-powered development — building real products
@@ -25,14 +37,7 @@ export const About = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-            {[
-              { label: "Location", value: "Milton Keynes, UK" },
-              { label: "Experience", value: "6+ Years" },
-              { label: "Availability", value: "Immediately available" },
-              { label: "Work type", value: "Hybrid or Remote" },
-              { label: "Email", value: "madhurid0309@gmail.com" },
-              { label: "GitHub", value: "github.com/mpokala-dev" },
-            ].map(({ label, value }) => (
+            {details.map(({ label, value }) => (
               <div key={label} className="flex items-center gap-4 border-b border-gray-100 pb-3">
                 <span className="text-sm font-medium text-gray-400 w-28 flex-shrink-0">{label}</span>
                 <span className="text-sm text-gray-700 font-medium">{value}</span>

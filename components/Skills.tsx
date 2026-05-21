@@ -1,29 +1,9 @@
-const skillGroups = [
-  {
-    category: "Frontend",
-    color: "blue",
-    skills: ["React 19", "TypeScript", "Next.js 14", "JavaScript ES6+", "Redux", "Tailwind CSS", "HTML5", "CSS3"],
-  },
-  {
-    category: "Backend",
-    color: "green",
-    skills: ["Node.js", "Express.js", "REST APIs", "MongoDB", "JWT Auth", "Docker"],
-  },
-  {
-    category: "AI & Prompt Engineering",
-    color: "purple",
-    skills: ["OpenAI API", "Anthropic Claude API", "Prompt Engineering", "RAG", "Vercel AI SDK", "LangChain"],
-  },
-  {
-    category: "Tools & DevOps",
-    color: "orange",
-    skills: ["Git", "GitHub Actions", "CI/CD", "Vitest", "React Testing Library", "Jira", "Confluence"],
-  },
-]
+import { skillGroups } from "@/lib/data"
+import type { SkillColor } from "@/lib/data"
 
-const colorMap: Record<string, string> = {
-  blue: "bg-blue-50 text-blue-700 border-blue-100",
-  green: "bg-green-50 text-green-700 border-green-100",
+const colorMap: Record<SkillColor, string> = {
+  blue:   "bg-blue-50 text-blue-700 border-blue-100",
+  green:  "bg-green-50 text-green-700 border-green-100",
   purple: "bg-purple-50 text-purple-700 border-purple-100",
   orange: "bg-orange-50 text-orange-700 border-orange-100",
 }
