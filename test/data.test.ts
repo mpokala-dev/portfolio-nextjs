@@ -102,10 +102,11 @@ describe("projects", () => {
     })
   })
 
-  it("task manager is the only live project", () => {
+  it("task manager and expense tracker are the only live projects", () => {
     const liveProjects = projects.filter((p) => !p.comingSoon)
-    expect(liveProjects).toHaveLength(1)
+    expect(liveProjects).toHaveLength(2)
     expect(liveProjects[0].title).toBe("Task Manager App")
+    expect(liveProjects[1].title).toBe("Expense Tracker")
   })
 
   it("live project has valid URLs", () => {

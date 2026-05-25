@@ -18,16 +18,25 @@ describe("Projects", () => {
 
   it("task manager has live demo link", () => {
     render(<Projects />)
-    const demoLink = screen.getByRole("link", { name: /view live demo/i })
+    const demoLink = screen.getByRole("link", { name: /live-task manager app/i })
     expect(demoLink).toHaveAttribute(
       "href",
       "https://task-manager-ts-gamma.vercel.app"
     )
   })
 
+  it("expense tracker has live demo link", () => {
+    render(<Projects />)
+    const demoLink = screen.getByRole("link", { name: /live-expense tracker/i })
+    expect(demoLink).toHaveAttribute(
+      "href",
+      "https://expense-tracker-fullstack-fawn.vercel.app"
+    )
+  })
+
   it("coming soon projects show coming soon badge", () => {
     render(<Projects />)
     const badges = screen.getAllByText("Coming soon")
-    expect(badges).toHaveLength(3)
+    expect(badges).toHaveLength(2)
   })
 })

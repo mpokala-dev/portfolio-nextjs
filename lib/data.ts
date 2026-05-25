@@ -89,11 +89,10 @@ export const projects: Project[] = [
     title:       "Expense Tracker",
     description: "Full-stack app with React frontend, Node.js + Express backend, MongoDB database, JWT authentication, and CI/CD pipeline.",
     tech:        ["React", "Node.js", "MongoDB", "JWT", "Docker"],
-    live:        "",
-    github:      "",
+    live:        "https://expense-tracker-fullstack-fawn.vercel.app",
+    github:      "https://github.com/mpokala-dev/expense-tracker-fullstack",
     badge:       "Full-Stack",
     badgeColor:  "bg-orange-50 text-orange-700",
-    comingSoon:  true,
   },
   {
     title:       "AI Cover Letter Generator",
