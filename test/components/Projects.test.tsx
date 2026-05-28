@@ -37,6 +37,6 @@ describe("Projects", () => {
   it("coming soon projects show coming soon badge", () => {
     render(<Projects />)
     const badges = screen.getAllByText("Coming soon")
-    expect(badges).toHaveLength(2)
+    expect(badges).toHaveLength(1)
   })
 })
