@@ -34,9 +34,8 @@ describe("Projects", () => {
     )
   })
 
-  it("coming soon projects show coming soon badge", () => {
+  it("live projects have  no coming soon badge", () => {
     render(<Projects />)
-    const badges = screen.getAllByText("Coming soon")
-    expect(badges).toHaveLength(1)
+    expect(screen.queryByText("Coming soon")).not.toBeInTheDocument()
   })
 })

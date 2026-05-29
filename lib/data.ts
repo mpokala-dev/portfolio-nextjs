@@ -98,7 +98,7 @@ export const projects: Project[] = [
     title:       "AI Cover Letter Generator",
     description: "React app using OpenAI and Anthropic Claude APIs to generate tailored cover letters from a job description. Built with real prompt engineering patterns.",
     tech:        ["React", "OpenAI API", "Claude API", "Prompt Engineering"],
-    live:        "https://cover-letter-gen-phi.vercel.app/",
+    live:        "https://cover-letter-gen-phi.vercel.app",
     github:      "https://github.com/mpokala-dev/cover-letter-gen",
     badge:       "AI App",
     badgeColor:  "bg-purple-50 text-purple-700",
@@ -108,11 +108,11 @@ export const projects: Project[] = [
     title:       "AI Document Chat — RAG",
     description: "Upload a PDF and have a natural conversation with it. Full RAG pipeline with OpenAI embeddings, semantic search, and streaming UI.",
     tech:        ["Next.js", "Vercel AI SDK", "OpenAI", "RAG", "PDF parsing"],
-    live:        "",
-    github:      "",
+    live:        "https://rag-document-chat-dun.vercel.app",
+    github:      "https://github.com/mpokala-dev/rag-document-chat",
     badge:       "AI + Full-Stack",
     badgeColor:  "bg-green-50 text-green-700",
-    comingSoon:  true,
+    comingSoon:  false,
   },
 ]
 
