@@ -3,12 +3,12 @@ import { personalInfo } from "../lib/data"
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="bg-gray-900 text-white py-16 px-6">
+    <footer id="contact" className="py-16 px-6" style={{ background: "var(--footer-bg)", color: "#fff" }}>
       <div className="max-w-4xl mx-auto">
 
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Let&apos;s Work Together</h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4" style={{ color: "#F5F0E8" }}>Let&apos;s Work Together</h2>
+          <p className="max-w-xl mx-auto" style={{ color: "#A08070" }}>
             I&apos;m actively looking for Senior Frontend, Full-Stack, or AI Engineer roles
             in the UK. If you have an opportunity, I&apos;d love to hear from you.
           </p>
@@ -16,53 +16,40 @@ export const Footer = () => {
 
         <div className="grid md:grid-cols-2 gap-12 mb-12">
 
-          {/* Left — contact details */}
           <div className="flex flex-col gap-6">
             <div>
-              <p className="text-sm text-gray-400 mb-1">Email</p>
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="text-white hover:text-blue-400 transition-colors font-medium"
-              >
+              <p className="text-sm mb-1" style={{ color: "#8C6B55" }}>Email</p>
+              <a href={`mailto:${personalInfo.email}`} className="footer-email font-medium">
                 {personalInfo.email}
               </a>
             </div>
             <div>
-              <p className="text-sm text-gray-400 mb-1">Location</p>
-              <p className="text-white font-medium">{personalInfo.location}</p>
+              <p className="text-sm mb-1" style={{ color: "#8C6B55" }}>Location</p>
+              <p className="font-medium" style={{ color: "#F5F0E8" }}>{personalInfo.location}</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400 mb-1">Availability</p>
-              <p className="text-white font-medium">{personalInfo.availability}</p>
+              <p className="text-sm mb-1" style={{ color: "#8C6B55" }}>Availability</p>
+              <p className="font-medium" style={{ color: "#F5F0E8" }}>{personalInfo.availability}</p>
             </div>
             <div>
-              <p className="text-sm text-gray-400 mb-3">Profiles</p>
+              <p className="text-sm mb-3" style={{ color: "#8C6B55" }}>Profiles</p>
               <div className="flex gap-4">
-                <a
-                  href={personalInfo.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-gray-600 hover:border-blue-400 text-gray-300 hover:text-white font-medium px-5 py-2.5 rounded-xl transition-colors text-sm"
-                >
+                <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer"
+                  className="footer-link font-medium px-5 py-2.5 rounded-xl text-sm">
                   LinkedIn
                 </a>
-                <a
-                  href={personalInfo.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-gray-600 hover:border-blue-400 text-gray-300 hover:text-white font-medium px-5 py-2.5 rounded-xl transition-colors text-sm"
-                >
+                <a href={personalInfo.github} target="_blank" rel="noopener noreferrer"
+                  className="footer-link font-medium px-5 py-2.5 rounded-xl text-sm">
                   GitHub
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Right — contact form */}
           <ContactForm />
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+        <div className="pt-8 text-center text-sm" style={{ borderTop: "1px solid var(--footer-border)", color: "#6B4A35" }}>
           Built with Next.js 14 &middot; TypeScript &middot; Tailwind CSS &middot; Deployed on Vercel
         </div>
 

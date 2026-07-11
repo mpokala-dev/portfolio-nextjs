@@ -4,9 +4,10 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { navLinks, personalInfo } from "@/lib/data"
 
+// Navbar stays "use client" only for the scroll + mobile menu state
 export const Navbar = () => {
-  const [scrolled, setScrolled]   = useState(false)
-  const [menuOpen, setMenuOpen]   = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -15,21 +16,22 @@ export const Navbar = () => {
   }, [])
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
-    }`}>
+    <nav
+      className="fixed top-0 w-full z-50 transition-all duration-300"
+      style={{
+        background: scrolled ? "rgba(245,240,232,0.95)" : "transparent",
+        backdropFilter: scrolled ? "blur(8px)" : "none",
+        borderBottom: scrolled ? "1px solid var(--cream-border)" : "none",
+      }}
+    >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-blue-600">
-          MP<span className="text-gray-900">.</span>
+        <Link href="/" className="text-xl font-bold" style={{ color: "var(--rust)" }}>
+          MP<span style={{ color: "var(--brown-deep)" }}>.</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-sm text-gray-600 hover:text-blue-600 transition-colors font-medium"
-            >
+            <Link key={link.label} href={link.href} className="nav-link text-sm font-medium">
               {link.label}
             </Link>
           ))}
@@ -37,14 +39,16 @@ export const Navbar = () => {
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+            className="hover-bg-rust text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+            style={{ background: "var(--rust)", color: "#fff" }}
           >
             GitHub
           </a>
         </div>
 
         <button
-          className="md:hidden text-gray-600"
+          className="md:hidden"
+          style={{ color: "var(--brown-mid)" }}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,14 +61,11 @@ export const Navbar = () => {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden px-6 py-4 flex flex-col gap-4"
+          style={{ background: "var(--cream)", borderTop: "1px solid var(--cream-border)" }}>
           {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-sm text-gray-600 hover:text-blue-600 font-medium"
-              onClick={() => setMenuOpen(false)}
-            >
+            <Link key={link.label} href={link.href} className="nav-link text-sm font-medium"
+              onClick={() => setMenuOpen(false)}>
               {link.label}
             </Link>
           ))}

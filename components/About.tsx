@@ -11,36 +11,45 @@ export const About = () => {
   ]
 
   return (
-    <section id="about" className="py-24 px-6 bg-white">
+    <section id="about" className="py-24 px-6" style={{ background: "var(--cream-card)" }}>
       <div className="max-w-4xl mx-auto">
 
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
-        <div className="w-16 h-1 bg-blue-600 rounded mb-10"></div>
+        <h2 className="text-3xl font-bold mb-3" style={{ color: "var(--brown-deep)" }}>About Me</h2>
+        <div className="flex items-center gap-3 mb-10">
+          <div className="h-px flex-1" style={{ background: "var(--cream-border)" }}></div>
+          <div className="w-12 h-0.5" style={{ background: "var(--rust)" }}></div>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="leading-relaxed mb-4" style={{ color: "var(--brown-mid)" }}>
               I&apos;m a Senior Frontend Developer with{" "}
-              <strong>{personalInfo.yearsExp} years of commercial experience</strong>{" "}
+              <strong style={{ color: "var(--brown-deep)" }}>{personalInfo.yearsExp} years of commercial experience</strong>{" "}
               building scalable web applications for global clients in Banking and Insurance.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              I&apos;ve delivered production React applications at <strong>IBM</strong> for Synchrony Bank,
-              led frontend teams at <strong>Capgemini</strong> for MetLife, and worked across
-              the full delivery lifecycle at <strong>Cognizant</strong>.
+            <p className="leading-relaxed mb-4" style={{ color: "var(--brown-mid)" }}>
+              I&apos;ve delivered production React applications at <strong style={{ color: "var(--brown-deep)" }}>IBM</strong> for the MetLife insurance portal,
+              led frontend teams at <strong style={{ color: "var(--brown-deep)" }}>Capgemini</strong> for Synchrony Bank, and worked across
+              the full delivery lifecycle at <strong style={{ color: "var(--brown-deep)" }}>Cognizant</strong> and{" "}
+              <strong style={{ color: "var(--brown-deep)" }}>Avifauna Technology</strong>.
             </p>
-            <p className="text-gray-600 leading-relaxed">
-              Currently levelling up with AI-powered development — building real products
-              with <strong>OpenAI</strong> and <strong>Anthropic Claude APIs</strong> using
+            <p className="leading-relaxed" style={{ color: "var(--brown-mid)" }}>
+              Currently building AI-powered products with{" "}
+              <strong style={{ color: "var(--brown-deep)" }}>OpenAI</strong> and{" "}
+              <strong style={{ color: "var(--brown-deep)" }}>Anthropic Claude APIs</strong> using
               prompt engineering and RAG patterns.
             </p>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-0">
             {details.map(({ label, value }) => (
-              <div key={label} className="flex items-center gap-4 border-b border-gray-100 pb-3">
-                <span className="text-sm font-medium text-gray-400 w-28 flex-shrink-0">{label}</span>
-                <span className="text-sm text-gray-700 font-medium">{value}</span>
+              <div
+                key={label}
+                className="flex items-center gap-4 py-3"
+                style={{ borderBottom: "1px solid var(--cream-border)" }}
+              >
+                <span className="text-sm font-medium w-28 flex-shrink-0" style={{ color: "var(--brown-muted)" }}>{label}</span>
+                <span className="text-sm font-medium" style={{ color: "var(--brown-deep)" }}>{value}</span>
               </div>
             ))}
           </div>

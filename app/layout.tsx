@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Madhuri Pokala — Senior Frontend Developer",
     description: "React · TypeScript · Next.js · AI Apps · Open to UK Roles",
-    url: "https://portfolio-nextjs-madhuri.vercel.app",
+    url: "https://portfolio-nextjs-rho-eight.vercel.app",
     siteName: "Madhuri Pokala Portfolio",
     locale: "en_GB",
     type: "website",
@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-gray-50 text-gray-900 antialiased`}>
+      <body className={`${inter.className} antialiased`} style={{ background: "var(--cream)", color: "var(--brown-mid)" }}>
         <Navbar />
         {children}
       </body>

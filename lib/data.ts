@@ -12,7 +12,7 @@ export const navLinks = [
 // ── PERSONAL INFO ─────────────────────────────────────────────────────────────
 export const personalInfo = {
   name: "Madhuri Pokala",
-  role: "Senior Frontend  & AI Engineer · React · TypeScript · AI Apps",
+  role: "Senior Frontend & AI Engineer · React · TypeScript · AI Apps",
   location: "Milton Keynes, UK",
   email: "madhurid0309@gmail.com",
   github: "https://github.com/mpokala-dev",
@@ -20,7 +20,7 @@ export const personalInfo = {
   portfolio: "https://portfolio-nextjs-rho-eight.vercel.app",
   availability: "Immediately available",
   workType: "Hybrid or Remote",
-  yearsExp: "6+",
+  yearsExp: "10",
 } as const;
 
 // ── HERO ──────────────────────────────────────────────────────────────────────
@@ -129,17 +129,17 @@ export const projects: Project[] = [
     live: "https://task-manager-ts-gamma.vercel.app",
     github: "https://github.com/mpokala-dev/task-manager-ts",
     badge: "Frontend",
-    badgeColor: "bg-blue-50 text-blue-700",
+    badgeColor: "badge-blue",
   },
   {
     title: "Expense Tracker",
     description:
-      "Full-stack app with React frontend, Node.js + Express backend, MongoDB database, JWT authentication, and CI/CD pipeline.",
-    tech: ["React", "Node.js", "MongoDB", "JWT", "Docker"],
+      "Full-stack app with React frontend, Node.js + Express backend, MongoDB database, JWT authentication, 34 backend tests at 84% coverage, and CI/CD pipeline.",
+    tech: ["React 19", "Node.js", "Express", "MongoDB", "JWT", "Vitest"],
     live: "https://expense-tracker-fullstack-fawn.vercel.app",
     github: "https://github.com/mpokala-dev/expense-tracker-fullstack",
     badge: "Full-Stack",
-    badgeColor: "bg-orange-50 text-orange-700",
+    badgeColor: "badge-orange",
   },
   {
     title: "AI Cover Letter Generator",
@@ -149,7 +149,7 @@ export const projects: Project[] = [
     live: "https://cover-letter-gen-phi.vercel.app",
     github: "https://github.com/mpokala-dev/cover-letter-gen",
     badge: "AI App",
-    badgeColor: "bg-purple-50 text-purple-700",
+    badgeColor: "badge-purple",
     comingSoon: false,
   },
   {
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     live: "https://rag-document-chat-dun.vercel.app",
     github: "https://github.com/mpokala-dev/rag-document-chat",
     badge: "AI + Full-Stack",
-    badgeColor: "bg-green-50 text-green-700",
+    badgeColor: "badge-green",
     comingSoon: false,
   },
 ];
@@ -176,14 +176,36 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    role: "Technology Support Developer (Volunteer)",
+    company: "BABY-I (Reach Volunteering)",
+    period: "2026 – Present",
+    domain: "Charity — Infant Safety",
+    points: [
+      "Configuring an Odoo v19 CMS for a youth-led charity, defining user roles and permissions across six user groups.",
+      "Gathered stakeholder requirements and authored a technical specification covering role-based dashboards, folder hierarchy with ACLs, and system administration procedures.",
+      "Leveraged frontend and enterprise systems experience to deliver a structured platform supporting the charity's infant safety initiatives.",
+    ],
+  },
+  {
+    role: "Frontend Developer",
+    company: "Avifauna Technology Limited",
+    period: "2023 – 2026",
+    domain: "Contract — Remote UK",
+    points: [
+      "Developed scalable, component-based web applications using React.js, TypeScript, and JavaScript ES6+, integrating Supabase for backend services, authentication, and data management across multiple client projects.",
+      "Improved rendering performance by reducing unnecessary re-renders using React.memo, useMemo, and useCallback; optimised load times through code splitting, lazy loading, and API optimisation.",
+      "Collaborated with stakeholders at all levels, translating technical concepts into clear, actionable insights across the full delivery lifecycle.",
+    ],
+  },
+  {
     role: "Senior Developer",
     company: "Cognizant",
     period: "2022 – 2023",
     domain: "Financial Services",
     points: [
-      "Developed and maintained React components for financial services clients",
-      "Built reusable UI components with HTML5, CSS3, and JavaScript ES6+",
-      "Participated in Agile/Scrum ceremonies using Jira and Confluence",
+      "Developed and maintained reusable React components for an enterprise-scale platform, establishing a shared component architecture with strict TypeScript standards.",
+      "Enhanced performance for data-intensive interfaces through memoisation, lazy loading, and code splitting.",
+      "Collaborated with UX designers and backend engineers to deliver accessible user experiences within an Agile environment using Jira and Confluence.",
     ],
   },
   {
@@ -192,10 +214,10 @@ export const experiences: Experience[] = [
     period: "2019 – 2022",
     domain: "Banking — Synchrony",
     points: [
-      "Led a frontend team of 4 developers building React applications for Synchrony Bank",
-      "Architected reusable component library reducing development time by 30%",
-      "Conducted technical interviews and code reviews",
-      "Implemented Redux state management for complex financial data flows",
+      "Led a frontend team of 4 developers building React applications for Synchrony Bank, maintaining zero critical production incidents across three years.",
+      "Architected a reusable React component library that reduced development effort by 30% and became the foundation for all new feature development.",
+      "Implemented OIDC and OAuth2 authentication flows with secure token and session management, meeting stringent financial services compliance requirements.",
+      "Recognised twice with the Award of Excellence for outstanding contribution to enterprise banking platform delivery.",
     ],
   },
   {
@@ -204,10 +226,9 @@ export const experiences: Experience[] = [
     period: "2016 – 2019",
     domain: "Insurance — MetLife",
     points: [
-      "Built React.js components for MetLife insurance portal serving 500k+ users",
-      "Collaborated with UX designers to implement pixel-perfect responsive layouts",
-      "Integrated REST APIs and managed complex async state with Redux Thunk",
-      "Mentored 2 junior developers in React best practices",
+      "Built React.js interfaces for the MetLife insurance portal serving 500,000+ customers, maintaining zero critical production defects.",
+      "Translated UX wireframes into responsive, WCAG-compliant web applications across desktop, tablet, and mobile.",
+      "Integrated RESTful APIs and managed complex async data flows using Redux Thunk; designed reusable component libraries adopted across multiple enterprise applications.",
     ],
   },
 ];
