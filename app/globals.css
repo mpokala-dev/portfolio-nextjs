@@ -2,20 +2,22 @@
 
 /* ── JPM-INSPIRED PALETTE ──────────────────────────────────────────────────── */
 :root {
-  --cream:        #F5F0E8;
-  --cream-card:   #FDFAF5;
-  --cream-border: #E2D9CC;
-  --brown-deep:   #2C1A0E;
-  --brown-mid:    #5C3D2E;
-  --brown-muted:  #8C6B55;
-  --rust:         #9B4A1E;
-  --rust-light:   #C4622A;
-  --rust-bg:      #F5EAE4;
-  --footer-bg:    #1E0F06;
-  --footer-border:#3A1F10;
+  --cream: #f5f0e8;
+  --cream-card: #fdfaf5;
+  --cream-border: #e2d9cc;
+  --brown-deep: #2c1a0e;
+  --brown-mid: #5c3d2e;
+  --brown-muted: #8c6b55;
+  --rust: #9b4a1e;
+  --rust-light: #c4622a;
+  --rust-bg: #f5eae4;
+  --footer-bg: #1e0f06;
+  --footer-border: #3a1f10;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--cream);
@@ -23,36 +25,105 @@ body {
 }
 
 /* ── HOVER UTILITIES (CSS-only, no JS handlers needed) ─────────────────────── */
-.hover-rust:hover         { color: var(--rust) !important; }
-.hover-rust-light:hover   { color: var(--rust-light) !important; }
-.hover-brown-deep:hover   { color: var(--brown-deep) !important; }
-.hover-bg-rust:hover      { background: var(--rust-light) !important; }
-.hover-border-rust:hover  { border-color: var(--rust) !important; color: #fff !important; }
+.hover-rust:hover {
+  color: var(--rust) !important;
+}
+.hover-rust-light:hover {
+  color: var(--rust-light) !important;
+}
+.hover-brown-deep:hover {
+  color: var(--brown-deep) !important;
+}
+.hover-bg-rust:hover {
+  background: var(--rust-light) !important;
+}
+.hover-border-rust:hover {
+  border-color: var(--rust) !important;
+  color: #fff !important;
+}
 
 /* ── NAV LINK hover ─────────────────────────────────────────────────────────── */
-.nav-link { color: var(--brown-mid); transition: color 0.2s; }
-.nav-link:hover { color: var(--rust); }
+.nav-link {
+  color: var(--brown-mid);
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: var(--rust);
+}
 
 /* ── BADGE UTILITY CLASSES ──────────────────────────────────────────────────── */
-.badge-blue   { background: #EAF0FA; color: #1E4D8C; }
-.badge-orange { background: #FAF0E6; color: #8C4A1E; }
-.badge-purple { background: #F0EAF5; color: #5C2D7A; }
-.badge-green  { background: #EAF5EE; color: #1E6B3A; }
+.badge-blue {
+  background: #eaf0fa;
+  color: #1e4d8c;
+}
+.badge-orange {
+  background: #faf0e6;
+  color: #8c4a1e;
+}
+.badge-purple {
+  background: #f0eaf5;
+  color: #5c2d7a;
+}
+.badge-green {
+  background: #eaf5ee;
+  color: #1e6b3a;
+}
+.badge-pink {
+  background: #ebe2eb;
+  color: #6b1e48;
+}
 
 /* ── SKILL PILL VARIANTS ────────────────────────────────────────────────────── */
-.skill-blue   { background: #EAF0FA; color: #1E4D8C; border-color: #C5D8F0; }
-.skill-green  { background: #EAF5EE; color: #1E6B3A; border-color: #BCDFC9; }
-.skill-purple { background: #F0EAF5; color: #5C2D7A; border-color: #D5BFEA; }
-.skill-orange { background: #FAF0E6; color: #8C4A1E; border-color: #E8CEAF; }
+.skill-blue {
+  background: #eaf0fa;
+  color: #1e4d8c;
+  border-color: #c5d8f0;
+}
+.skill-green {
+  background: #eaf5ee;
+  color: #1e6b3a;
+  border-color: #bcdfc9;
+}
+.skill-purple {
+  background: #f0eaf5;
+  color: #5c2d7a;
+  border-color: #d5bfea;
+}
+.skill-orange {
+  background: #faf0e6;
+  color: #8c4a1e;
+  border-color: #e8ceaf;
+}
 
 /* ── FOOTER LINK HOVER ──────────────────────────────────────────────────────── */
-.footer-link { color: #D4B8A8; border: 1px solid #3A1F10; transition: border-color 0.2s, color 0.2s; }
-.footer-link:hover { border-color: var(--rust); color: #fff; }
+.footer-link {
+  color: #d4b8a8;
+  border: 1px solid #3a1f10;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.footer-link:hover {
+  border-color: var(--rust);
+  color: #fff;
+}
 
-.footer-email { color: #F5F0E8; transition: color 0.2s; }
-.footer-email:hover { color: var(--rust-light); }
+.footer-email {
+  color: #f5f0e8;
+  transition: color 0.2s;
+}
+.footer-email:hover {
+  color: var(--rust-light);
+}
 
 /* ── PROJECT ICON HOVER ─────────────────────────────────────────────────────── */
-.icon-link { color: var(--brown-muted); transition: color 0.2s; }
-.icon-link:hover { color: var(--rust); }
-.icon-link-github:hover { color: var(--brown-deep); }
+.icon-link {
+  color: var(--brown-muted);
+  transition: color 0.2s;
+}
+.icon-link:hover {
+  color: var(--rust);
+}
+.icon-link-github:hover {
+  color: var(--brown-deep);
+}

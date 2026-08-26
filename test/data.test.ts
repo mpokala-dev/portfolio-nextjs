@@ -88,8 +88,8 @@ describe("skillGroups", () => {
 });
 
 describe("projects", () => {
-  it("has 4 projects", () => {
-    expect(projects).toHaveLength(4);
+  it("has 5 projects", () => {
+    expect(projects).toHaveLength(5);
   });
 
   it("all projects have required fields", () => {
@@ -104,16 +104,17 @@ describe("projects", () => {
 
   it("task manager, expense tracker, AI cover letter generator and RAG document chat are the live projects", () => {
     const liveProjects = projects.filter((p) => !p.comingSoon);
-    expect(liveProjects).toHaveLength(4);
-    expect(liveProjects[0].title).toBe("Task Manager App");
-    expect(liveProjects[1].title).toBe("Expense Tracker");
-    expect(liveProjects[2].title).toBe("AI Cover Letter Generator");
-    expect(liveProjects[3].title).toBe("AI Document Chat — RAG");
+    expect(liveProjects).toHaveLength(5);
+    expect(liveProjects[0].title).toBe("Dev Tinder App");
+    expect(liveProjects[1].title).toBe("Task Manager App");
+    expect(liveProjects[2].title).toBe("Expense Tracker");
+    expect(liveProjects[3].title).toBe("AI Cover Letter Generator");
+    expect(liveProjects[4].title).toBe("AI Document Chat — RAG");
   });
 
   it("live project has valid URLs", () => {
     const liveProject = projects.find((p) => !p.comingSoon);
-    expect(liveProject?.live).toMatch(/^https:\/\//);
+    expect(liveProject?.live).toMatch(/^https?:\/\//);
     expect(liveProject?.github).toMatch(/^https:\/\//);
   });
 

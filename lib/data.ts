@@ -116,6 +116,30 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Dev Tinder App",
+    description:
+      "DevTinder is a full-stack developer networking application that is built to demonstrate React and full-stack development skills. The frontend is a React-based single-page application, and the backend is built using Node.js and Express with MongoDB and Mongoose.",
+    tech: [
+      "React 19",
+      "JavaScript",
+      "Tailwind CSS",
+      "Vitest",
+      "Daisy UI",
+      "Node.js",
+      "Express",
+      "Mongoose",
+      "MongoDB",
+      "JWT",
+      "websockets",
+      "RTL",
+      "AWS EC2 instance deployment",
+    ],
+    live: "http://13.50.248.247",
+    github: "https://github.com/mpokala-dev/Dev-Tinder",
+    badge: "Full-Stack",
+    badgeColor: "badge-pink",
+  },
+  {
     title: "Task Manager App",
     description:
       "Production-quality task manager with TypeScript strict mode, inline editing, due dates, dark mode, and 93% test coverage with Vitest and GitHub Actions CI.",
